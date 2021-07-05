@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/styles.scss" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        opacity: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="screen__cover">
+      <div class="screen__cover-content">
+          <p>Pour une experience optimale aller sur un écran portable</p>
+      </div>
+    </div>
+    <div class="load">
+      <!-- <span><span id="counter"></span></span> -->
+      <div class="load__letter">
+        <span><span>C</span></span>
+        <span><span>a</span></span>
+        <span><span>l</span></span>
+        <span><span>c</span></span>
+        <span><span>u</span></span>
+        <span><span>l</span></span>
+        <span><span>a</span></span>
+        <span><span>t</span></span>
+        <span><span>o</span></span>
+        <span><span>r</span></span>
+      </div>
+    </div>
+    <div class="navigation" aria-hidden="true">
+      <div class="navigation__bg navigation__bg-primary navigation__bg-active"></div>
+      <div class="navigation__bg navigation__bg-danger"></div>
+      <div class="navigation__bg navigation__bg-orange"></div>
+      <div class="wrap__close">
+        <button id="navigationClose" class="navigation__close">
+          <span class="cross"></span><span>Fermer le menu</span>
+        </button>
+        <div class="myName">
+            <a href="mailto: znco93@hotmail.fr">made with &#128151</a>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li class="cover__nav"></li>
+          <li class="v__link" data-value="variation">
+            Calcul taux de variation
+          </li>
+          <li class="v__link" data-value="percentSalary">
+            Calcul bénéfice
+          </li>
+        </ul>
+      </nav>
+      <div class="wrap__color">
+        <ul class="list__color">
+          <li data-color="danger" class="color color-danger"></li>
+          <li
+            data-color="primary"
+            class="color color-primary color-border"
+          ></li>
+          <li data-color="orange" class="color color-orange"></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div class="cover__container"></div>
+      <header>
+        <button id="navigationOpen" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+       <div class="title">
+        <h1>calculator</h1>
+       </div>
+      </header>
+      <main class="grid">
+        <div class="wrap__form grid__content grid__content-form">
+          <div class="form">
+            <div id="variation" class="active grid__modal">
+              <form>
+                <label for="">Calcul taux de variation</label>
+                <input
+                  class="input1"
+                  type="text"
+                  placeholder="salaire année n -1"
+                  required
+                />
+                <input
+                  class="input2"
+                  type="text"
+                  placeholder="salaire année en cours"
+                  required
+                />
+                <button id="btnVar" class="btn" data-value="variation">
+                  Valider
+                </button>
+              </form>
+            </div>
+            <div id="percentSalary" class="grid__modal">
+              <form>
+                <label for="">Calcul bénéfice</label>
+                <input
+                  class="input1"
+                  type="text"
+                  placeholder="nombre en %"
+                  value=""
+                  required
+                />
+                <input
+                  class="input2"
+                  type="text"
+                  placeholder="montant total"
+                  required
+                />
+                <button
+                  id="btnVarSalary"
+                  class="btn"
+                  data-value="percentSalary"
+                >
+                  Valider
+                </button>
+              </form>
+            </div>
+          </div>
+          <div id="modal" class="modal grid__modal" aria-hidden="true">
+            <div class="close"></div>
+            <h1>resultat</h1>
+            <p></p>
+          </div>
+        </div>
+        <div class="chart grid__content grid__content-chart grid__modal">
+          <canvas id="myChart" class="active"></canvas>
+        </div>
+      </main>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
